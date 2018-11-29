@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+   </head>
+<style>
+div.chart{
+font-family: sans-serif;
+font-size:10px;
+}
+div.bar{
+background-color:red;
+color:black;
+line-height:5px;
+padding-right:5px;
+margin-bottom:5px;
+text-align:right;
+}
+div.line{
+height:10px;
+line-height:9px;
+padding-right:5px;
+margin-bottom:2%;
+float:left;
+text-align:right;
+}
+</style>
+    <body>
+<script>
+ var data = [{"id":"5","name":"vd","amt":"230"},
+				{"id":"4","name":"dfs","amt":"258"},
+			{"id":"2","name":"hy","amt":"100"},
+			{"id":"1","name":"gdvd","amt":"530"}];
+d3.select("body")
+.append("div")
+.attr("class", "chart")
+.selectAll("div.line")
+.data(data.cash)
+.enter()
+.append("div")
+.attr("class","line");
+
+d3.selectAll(div.line"0
+.append("div")
+.attr("class","label")
+.text(function(d){return d.name});
+
+d3.selectAll("div.line")
+.append("div")
+.attr("class","bar")
+.style("width",function(d){return d.amt/100 +"px"})
+.text(function(d){return.Math.round(d.amt)});
+</script>
+<div class="chart">
+<div class="line"/>
+<div class="line"/>
+<div class="line"/>
+<div class="line"/>
+</div>
+	</body>
+</html>
